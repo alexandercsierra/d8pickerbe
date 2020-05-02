@@ -7,7 +7,7 @@ const apiRouter = require('./apiRouter');
 server.use(helmet());
 server.use(cors());
 server.use(express.json());
-server.use('api', apiRouter);
+server.use('/api', apiRouter);
 
 server.get('/', (req, res)=>{
     res.status(200).json({message:'Welcome to the API'})
